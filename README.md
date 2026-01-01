@@ -29,4 +29,4 @@ After obtaining the required tools:
 
 Compatibility
 -------------
-This patch has only been tested with the **US** and **EU** release of *The Legend of Zelda: Spirit Tracks*. Support for other regions hasn't been tested so it may or may not work.
+This patch has only been tested with the **US**, **EU** and **JP** release of *The Legend of Zelda: Spirit Tracks*. Support for other regions hasn't been tested so it may or may not work.
