@@ -1,6 +1,6 @@
 dpad_check_attack:
 	stmfd r13!, r5-r7, r14
-	rbl 0x02088834, 0x02088854;overwritten opcode
+	rbl 0x02088834, 0x02088854, 0x02089F28;overwritten opcode
 	bl util_get_keys_pressed
 	tst r6, GBAKEY_B
 	movne r4, 0x02
@@ -14,7 +14,7 @@ dpad_check_attack:
 dpad_check_spin:
 	stmfd r13!, r3-r7, r14
 	push r0-r2
-	rbl 0x0218321C, 0x0218323C
+	rbl 0x0218321C, 0x0218323C, 0x02184DBC
 	pop r0-r2
 	bl util_get_keys_held
 	ldr r7, =GBAKEY_B | DSKEY_Y
@@ -43,7 +43,7 @@ dpad_check_blow_mic:
 	stmfd r13!, r1-r7, r14
 	ldrb r0, [r0, 0x05]
 	cmp r0, 0x00
-	rldrne r0, 0x020B52E0, 0x020B5300
+	rldrne r0, 0x020B52E0, 0x020B5300, 0x020B6B00
 	ldrneb r0, [r0, 0x28]
 	cmp r0, 0x00
 	bleq util_get_keys_held

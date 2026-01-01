@@ -23,7 +23,7 @@ dpad_movement:
 	ldrh r1, [r2, r3];get angle for direction
 
 	mov r0, r8
-	rbl 0x02078678, 0x02078698;gets map angle?
+	rbl 0x02078678, 0x02078698, 0x02079D50;gets map angle?
 	add r1, r0, r1
 
 	strh r1, [r4, 0x44]
@@ -33,7 +33,7 @@ dpad_movement:
 	strh r1, [r4, 0x46]
 	ldmfd r13!, r0-r7, r15
 @@endroutine:
-	rbl 0x02096AD4, 0x02096AF4;opcode being overwritten
+	rbl 0x02096AD4, 0x02096AF4, 0x020982A8;opcode being overwritten
 @@end2:
 	ldmfd r13!, r0-r7, r15
 

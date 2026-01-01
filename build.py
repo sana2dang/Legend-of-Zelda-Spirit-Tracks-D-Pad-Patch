@@ -73,6 +73,7 @@ def check_region() -> int:
 		region_lookup ={
 			b"BKIE" : 0,
 			b"BKIP" : 1,
+			b"BKIJ" : 2,
 		}
 		return region_lookup.get(game_id, -1)
 
